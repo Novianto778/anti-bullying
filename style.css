@@ -161,17 +161,35 @@ footer .sub {
 
 @media (max-width: 768px){
   .stop {
-    font-size: 134px;
+    font-size: 130px;
   }
   
   .bullying {
-    font-size: 78px;
+    font-size: 82px;
   }
   .now {
     font-size: 76px;
-    letter-spacing: 50px;
+    letter-spacing: 60px;
   }
   .container {
     width: 90%;
+  }
+  
+  .content-section .section h1 {
+    font-size: 32px;
+  }
+  
+  .content-section .section p {
+    text-indent: 30px;
+    font-size: 18px;
+  }
+  
+  
+  .content-section .section-card h1 {
+    font-size: 32px;
+  }
+
+  footer h1 {
+    font-size: 32px;
   }
 }

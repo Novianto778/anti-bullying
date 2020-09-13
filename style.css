@@ -158,3 +158,20 @@ footer .sub {
   margin-right: 20px;
   color: white;
 }
+
+@media (max-width: 768px){
+  .stop {
+    font-size: 134px;
+  }
+  
+  .bullying {
+    font-size: 78px;
+  }
+  .now {
+    font-size: 76px;
+    letter-spacing: 50px;
+  }
+  .container {
+    width: 90%;
+  }
+}

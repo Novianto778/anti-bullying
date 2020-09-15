@@ -30,6 +30,10 @@ const name = document.querySelector("#name");
 const text = document.querySelector("#text");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
+const readBtn = document.querySelector(".btn-read");
+const pengertian = document.querySelector("#pengertian");
+const navLinks = document.querySelectorAll(".nav-link");
+const navbar = document.querySelector(".navbar");
 
 let index = 0;
 
@@ -55,3 +59,48 @@ function showDampak(index) {
   text.textContent = item.text;
   img.src = item.imgUrl;
 }
+
+const navHeight = navbar.getBoundingClientRect().height;
+window.addEventListener("scroll", function () {
+  const scrollHeight = window.pageYOffset;
+
+  if (scrollHeight > navHeight) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+});
+
+readBtn.addEventListener("click", function () {
+  let position = pengertian.offsetTop - navHeight;
+  const fixedNav = navbar.classList.contains("sticky");
+
+  if (!fixedNav) {
+    position -= navHeight;
+  }
+
+  window.scrollTo({
+    top: position,
+    behavior: "smooth",
+  });
+});
+
+navLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const id = e.target.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+    const navHeight = navbar.getBoundingClientRect().height;
+    const fixedNav = navbar.classList.contains("sticky");
+    let position = element.offsetTop - navHeight;
+
+    if (!fixedNav) {
+      position -= navHeight;
+    }
+
+    window.scrollTo({
+      top: position,
+      behavior: "smooth",
+    });
+  });
+});

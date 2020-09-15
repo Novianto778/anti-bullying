@@ -1,9 +1,19 @@
 body {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 nav {
   height: 80px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .navbar-brand {
@@ -44,7 +54,6 @@ nav {
   -moz-box-shadow: 10px 13px 38px -5px rgba(0, 0, 0, 0.23);
 }
 
-
 .btn:hover {
   background-color: #da2c2c;
 }
@@ -79,7 +88,6 @@ nav {
   margin-bottom: 50px;
   font-size: 48px;
 }
-
 
 /* review part */
 .dampak {
@@ -159,11 +167,11 @@ footer .sub {
   color: white;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .stop {
     font-size: 130px;
   }
-  
+
   .bullying {
     font-size: 82px;
   }
@@ -174,17 +182,16 @@ footer .sub {
   .container {
     width: 90%;
   }
-  
+
   .content-section .section h1 {
     font-size: 32px;
   }
-  
+
   .content-section .section p {
     text-indent: 30px;
     font-size: 18px;
   }
-  
-  
+
   .content-section .section-card h1 {
     font-size: 32px;
   }
